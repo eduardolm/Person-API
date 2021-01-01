@@ -19,21 +19,21 @@ public class PersonDTO {
 
     private Long id;
 
-    @NotEmpty(message = "Nome é obrigatório!")
+    @NotEmpty(message = "Name must be informed.")
     @Size(min = 2, max = 100)
     private String firstName;
 
-    @NotEmpty(message = "Sobrenome é obrigatório!")
+    @NotEmpty(message = "Last name must be informed.")
     @Size(min = 2, max = 100)
     private String lastName;
 
-    @NotEmpty(message = "CPF não pode ser deixado em branco.")
-    @CPF(message = "CPF inválido.")
+    @NotEmpty(message = "CPF cannot be left blank.")
+    @CPF(message = "Invalid CPF.")
     private String cpf;
 
     private String birthDate;
 
-    @NotEmpty(message = "Obrigatório informar pelo menos um telefone.")
+    @NotEmpty(message = "At least one phone number must be informed.")
     @Valid
     private List<PhoneDTO> phones;
 }
