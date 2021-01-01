@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import one.digitalinnovation.personapi.entity.Phone;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.Valid;
@@ -36,5 +35,5 @@ public class PersonDTO {
 
     @NotEmpty(message = "Obrigatório informar pelo menos um telefone.")
     @Valid
-    private List<Phone> phones;
+    private List<PhoneDTO> phones;
 }
